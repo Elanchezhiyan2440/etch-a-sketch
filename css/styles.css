@@ -1,0 +1,19 @@
+html{
+    font-size: 62.5%;
+}
+#canvas{
+    border: solid black;
+    height: 40rem;
+    width: 40rem;
+    display: grid;
+}
+
+.grids{
+    border: 0;
+    display: grid;
+    border: 0px;
+}
+
+.grids:hover{
+    background-color: black;
+}
