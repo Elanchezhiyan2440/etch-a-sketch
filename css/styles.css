@@ -14,6 +14,14 @@ html{
     border: 0px;
 }
 
-.grids:hover{
-    background-color: black;
+.grids-hover{
+    background-color: black;     
+}
+
+.labelContainer{
+    display: flex;
+}
+
+.sliderBox{
+    display: flex;
 }
