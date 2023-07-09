@@ -1,7 +1,8 @@
 //code to get canvas values and store in variables and get height valeu, filter it out and convert to number.
 let slider = document.getElementsByClassName("slider")[0];
 slider.addEventListener("change", updateGridNumbers);
-window.addEventListener("load",updateGridNumbers)
+window.addEventListener("load",updateGridNumbers);
+document.getElementById("clearButton").addEventListener('click', clear =()=> clearCanvas());
 const canvas = document.getElementById("canvas"); 
 const canvasStyles = window.getComputedStyle(canvas);
 const canvasHeight = canvasStyles.getPropertyValue("height");
@@ -33,6 +34,7 @@ function resizeGridNumbers(){
         grids.style.height = `${gridHeight}px`;
         grids.style.width = `${gridWidth}px`;
     };
+    clearCanvas();
     hoverToPaint();
    };
 
@@ -40,3 +42,8 @@ function resizeGridNumbers(){
 function hoverToPaint(){document.querySelectorAll(".grids").forEach(elem => {
     elem.addEventListener('mouseover', e => e.target.classList.add('grids-hover'));
   })};
+
+//Clear canvas function:
+function clearCanvas(){document.querySelectorAll(".grids").forEach(elem =>{
+    elem.classList.remove('grids-hover');
+})};

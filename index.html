@@ -16,14 +16,15 @@
           <div class="labelContainer">
             <span id="sliderLabel">2</span>
         </div>
-        <div id="canvas">
-        </div>
+    </div>
+    <button class="button" id="clearButton">CLEAR</button>
+    <div id="canvas">
+
     </div>
 </body>
 <script>
     slider = document.getElementsByClassName('slider')[0];
     sliderLabel = document.getElementById("sliderLabel");
-    slider.addEventListener("input", updateValue = () => sliderLabel.textContent = slider.value
-    )
+    slider.addEventListener("input", updateValue = () => sliderLabel.textContent = slider.value);
 </script>
 </html>
