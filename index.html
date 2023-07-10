@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neuton&family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="sliderBox">
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="2" step="1" class="slider" id="myRange">
-          </div>
-          <div class="labelContainer">
-            <span id="sliderLabel">2</span>
+  </head>
+  <body>
+    <h1>ETCH A SKETCH</h1>
+    <div class="mainGrid">
+      <div class="left">
+        <div class="labelContainer">
+          <span id="sliderLabel">100</span>
         </div>
+        <div class="sliderBox">
+          <div class="sliderMarkersContainer">
+            <span class="sliderMarkers">1</span>
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="2"
+              step="1"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+          <div class="sliderMarkersContainer">
+            <span class="sliderMarkers">100</span>
+          </div>
+        </div>
+        <div class="buttonContainer">
+          <button class="button" id="clearButton">CLEAR</button>
+        </div>
+      </div>
+      <div class="right">
+        <div id="canvas"></div>
+      </div>
     </div>
-    <button class="button" id="clearButton">CLEAR</button>
-    <div id="canvas">
-
-    </div>
-</body>
-<script>
-    slider = document.getElementsByClassName('slider')[0];
+    <p id="credit">It's a me, MARIO!</p>
+  </body>
+  <script>
+    slider = document.getElementsByClassName("slider")[0];
     sliderLabel = document.getElementById("sliderLabel");
-    slider.addEventListener("input", updateValue = () => sliderLabel.textContent = slider.value);
-</script>
+    slider.addEventListener(
+      "input",
+      (updateValue = () => (sliderLabel.textContent = slider.value))
+    );
+  </script>
 </html>
