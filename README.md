@@ -15,3 +15,7 @@ The Etch-a-Sketch application has the following dependencies:
 
 - [normalize.css](https://necolas.github.io/normalize.css/) for CSS normalization.
 
+## live 
+
+the live site is at : https://elanchezhiyan2440.github.io/etch-a-sketch/ 
+if you wanna visit
